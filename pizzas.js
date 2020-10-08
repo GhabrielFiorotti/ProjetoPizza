@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Pizza = require('./model/Pizza');
+const pizza = require('./model/Pizza');
 
 
 require('dotenv/config');
@@ -10,7 +10,7 @@ console.log("passou aqui")
 
 router.post('/cadastroPizza', async (req, res) => {
     try {
-        const resposta = await Pizza.create({
+        const resposta = await pizza.create({
             nome: req.body.name,
             tamanho: req.body.tamanho,
             valor: req.body.valor,

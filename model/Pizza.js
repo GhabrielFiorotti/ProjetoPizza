@@ -1,7 +1,7 @@
 const database = require('../database');
 
 
-const pizzas = database.sequelize.define('pizza', {
+const pizza = database.sequelize.define('pizza', {
     pizza_id : {type: database.Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
     nome : {type : database.Sequelize.STRING(255), allowNull : false},
     tamanho : {type : database.Sequelize.STRING(255), allowNull : false},
@@ -13,5 +13,5 @@ const pizzas = database.sequelize.define('pizza', {
 
 console.log("RODANDO")
 //pizzas.sync({force: true});
-module.exports = pizzas;
+module.exports = pizza;
 
