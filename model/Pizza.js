@@ -12,6 +12,6 @@ const pizza = database.sequelize.define('pizza', {
 
 
 console.log("RODANDO")
-pizza.sync({force: true});
+pizza.sync({force: false});
 module.exports = pizza;
 
