@@ -11,7 +11,7 @@ console.log("passou aqui")
 router.post('/cadastroPizza', async (req, res) => {
     try {
         const resposta = await Pizza.create({
-            name: req.body.name,
+            nome: req.body.name,
             tamanho: req.body.tamanho,
             valor: req.body.valor,
             img: req.body.img
@@ -27,6 +27,7 @@ router.post('/cadastroPizza', async (req, res) => {
             return res.json(response, 201);
         }
     } catch (error) {
+        console.log(error);
         return res.json({ Mensagem: "Erro ao inserir no banco" }, 400);
     }
     }
