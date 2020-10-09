@@ -9,8 +9,6 @@ app.use(express.json());
 const rotaPizza = require('./pizzas');
 app.use('/projeto', rotaPizza);
 
-router.get('/imgpizza', function(req, res){
-  res.sendFile(path.join(__dirname+'/img/pizza1.jpg'));
-});
+
 
 app.listen(PORT);
