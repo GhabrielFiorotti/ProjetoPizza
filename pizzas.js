@@ -37,6 +37,10 @@ router.post('/cadastroPizza', async (req, res) => {
     }
 );
 
+router.get('/imgpizza', function(req, res){
+  res.sendFile(path.join(__dirname+'/img/pizza1.jpg'));
+});
+
 /* 
 
 router.post('/login', async (req, res) => {
