@@ -9,5 +9,4 @@ app.use(express.json());
 const rotaPizza = require('./pizzas');
 app.use('/projeto', rotaPizza);
 
-
 app.listen(PORT);

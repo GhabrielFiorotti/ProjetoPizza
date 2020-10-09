@@ -8,6 +8,10 @@ require('dotenv/config');
 
 console.log("passou aqui")
 
+router.get('/pizzas', (req, res)=>{
+    return res.json({nome: ""}, 201)
+})
+
 router.post('/cadastroPizza', async (req, res) => {
     try {
         const resposta = await pizza.create({
