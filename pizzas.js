@@ -9,8 +9,10 @@ require('dotenv/config');
 console.log("passou aqui")
 
 router.get('/pizzas', (req, res)=>{
-    return res.json({nome: ""}, 201)
-})
+    pizza.findAll().then(categories => {
+        res.json({category: categories});
+    });
+});
 
 router.post('/cadastroPizza', async (req, res) => {
     try {
