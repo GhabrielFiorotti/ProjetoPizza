@@ -10,7 +10,7 @@ console.log("passou aqui")
 
 router.get('/pizzas', (req, res)=>{
     pizza.findAll().then(categories => {
-        res.json({category: categories});
+        res.json(categories, 200);
     });
 });
 
